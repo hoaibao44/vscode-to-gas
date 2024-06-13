@@ -1,7 +1,7 @@
 // doc: https://developer.nulab.com/docs/backlog/api/2/get-project/#
 
 const BASE_URL = "https://teq-dev.backlog.com"
-const API_KEY = "EaHjVw0DhsrnlXRj2nsfkF5d6eXiBZQoJvNk6cWwaL3WaSS7alv8sqm6hLCcc5nQ"
+const API_KEY = "****" // require API key
 const API_PARAM = "?apiKey=" + API_KEY
 
 const END_POINT = {
@@ -23,7 +23,7 @@ function getProjectInfo() {
   return data
 }
 
-function getIssues() {
+export function getIssues() {
 
   const projectInfo = getProjectInfo()
   const projectId = projectInfo["id"]
@@ -36,5 +36,3 @@ function getIssues() {
   })
   console.log(issues)
 }
-
-export { getIssues }

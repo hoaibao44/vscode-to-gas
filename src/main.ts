@@ -1,6 +1,5 @@
 import { GoogleSheet } from "./google-sheet"
 import { Connection } from "./query"
-import {getIssues} from "./backlog"
 
 function getData() {
   const ss = new GoogleSheet('1NwLVf7enl7IsRb6TNUHkvbc6i7NOU6hLMZR0jzEdD-Y')
@@ -19,8 +18,4 @@ function getDataByQuery() {
   Logger.log(values)
 
   return values
-}
-
-function backlogSync() {
-  getIssues()
 }
