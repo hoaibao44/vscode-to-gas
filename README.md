@@ -16,7 +16,7 @@ clasp -v
 
 Login
 ```
-clash login
+clasp login
 ```
 
 ### clone to local
