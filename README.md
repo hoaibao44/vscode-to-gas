@@ -37,3 +37,12 @@ terminal is on `vscode-to-gas`
 ```
 clasp open
 ```
+
+### About clasp run
+It will not run your local version of yours code, it run the cloud version after you `clasp push`.
+So no way to debug your code locally.
+
+Anyway, Need Auth json cred from google, download it as `creds.json`, run `clasp login --creds creds.json`
+```
+clasp run yourFunctionName
+```
