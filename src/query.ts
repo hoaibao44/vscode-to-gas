@@ -8,7 +8,7 @@ export class Connection {
 
   queryDb = (queryString: string) => {
     // queryString: select * from sheetName
-    const {select, from, where} = this.processQueryString(queryString)
+    const {select, from, where} = parseSql(queryString)
 
     // execute get data from
     let values: any[][], header: string[]
@@ -40,10 +40,6 @@ export class Connection {
     }
 
     return values
-  }
-
-  processQueryString = (queryString: string) => {
-    return parseSql(queryString)
   }
 }
 
